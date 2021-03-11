@@ -1,0 +1,17 @@
+orbs:
+  gradle: bizzabo/gradle@1.1.0
+version: 2.1
+workflows:
+  build_project:
+    jobs:
+      - gradle/checkout_build_test_publish:
+          additional-steps:
+            - persist_to_workspace:
+                paths:
+                  - build/reports/tests/test
+                root: .
+      - store_test_results:
+          attach_workspace:
+            at: .
+          path: build/reports/tests/test
+
