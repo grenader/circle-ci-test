@@ -9,5 +9,5 @@ workflows:
   checkout-build-test:
     jobs:
       - gradle/test:
-          artifact-path: ""
+          reports_path: ""
           executor: java1_8
