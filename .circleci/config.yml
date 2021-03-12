@@ -4,6 +4,8 @@ executors:
       - image: 'cimg/openjdk:8.0'
 orbs:
   gradle: circleci/gradle@2.2.0
+parameters:
+  reports_path: false
 version: 2.1
 workflows:
   checkout-build-test:
