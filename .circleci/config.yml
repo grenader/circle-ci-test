@@ -8,5 +8,5 @@ version: 2.1
 workflows:
   checkout-build-test:
     jobs:
-      - gradle/test
+      - gradle/test:
           executor: j11
