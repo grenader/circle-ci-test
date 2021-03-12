@@ -1,7 +1,7 @@
 executors:
-  j11:
+  java1_8:
     docker:
-      - image: 'cimg/openjdk:11.0'
+      - image: 'cimg/openjdk:8.0'
 orbs:
   gradle: circleci/gradle@2.2.0
 version: 2.1
@@ -9,4 +9,4 @@ workflows:
   checkout-build-test:
     jobs:
       - gradle/test:
-          executor: j11
+          executor: java1_8
